@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const styledHome = styled.main`
+const styledHome = styled.div`
   background: red;
   width: 100vh;
   height: 100vh;
