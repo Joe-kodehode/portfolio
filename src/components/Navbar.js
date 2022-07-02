@@ -2,17 +2,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
-  grid-column: 2;
-  display: block;
-  height: 100vh;
-  max-width: 260x;
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  justify-self: end;
-  padding: 30px;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
+  align-self: center;
+  margin-left: 48px;
 `;
 
 const NavItem = styled(Link)`

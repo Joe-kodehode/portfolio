@@ -8,30 +8,37 @@ import Navbar from "./components/Navbar";
 import styled from "styled-components";
 
 const Main = styled.main`
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-  border: black 3px solid;
-  align-self: center;
-  justify-self: center;
-  max-height: 80%;
-  overflow-y: auto;
-  max-width: 80ch;
-  padding: 20px;
+  min-height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom left, #000000, teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Grid = styled.section`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1400px;
+  padding: 24px;
+  height: 100%;
 `;
 
 function App() {
   return (
     <>
       <Main>
-        <Routes>
-          <Route path="*" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Projects" element={<Projects />} />
-          <Route path="/Skills" element={<Skills />} />
-          <Route path="/Contact" element={<Contact />} />
-        </Routes>
+        <Grid>
+          <Routes>
+            <Route path="*" element={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Skills" element={<Skills />} />
+            <Route path="/Contact" element={<Contact />} />
+          </Routes>
+          <Navbar />
+        </Grid>
       </Main>
-      <Navbar />
     </>
   );
 }
