@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "Fake Store",
+    "img": "fake_store_image.png",
+    "description": "This fake online store was made using React. It utilizes techniques such as: Router, API, mapping, styled components and props.",
+    "languages": { "HTML": true, "CSS": true, "JS": true, "REACT": true }
+  },
+  {
+    "id": "1",
+    "name": "Fake Store",
+    "img": "fake_store_image.png",
+    "description": "This fake online store was made using React. It utilizes techniques such as: Router, API, mapping, styled components and props.",
+    "languages": { "HTML": true, "CSS": true, "JS": true, "REACT": true }
+  }
+]
