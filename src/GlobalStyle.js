@@ -8,8 +8,19 @@ const GlobalStyle = createGlobalStyle`
   
 }
 
-#root, body, html{
-   height: 100%;
-} `;
+#root {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} 
+
+body {
+   --bg-color: teal;
+   background: linear-gradient(to bottom left, #000000, var(--bg-color));
+    min-height: 100vh;
+}`;
 
 export default GlobalStyle;

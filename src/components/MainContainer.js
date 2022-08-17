@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
-const ContentWrapper = styled.article`
+const ContentWrapper = styled.main`
+  align-items: center;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 6px;
   border: black 1px solid;
-  padding: 20px;
-  grid-column: span 10;
   display: flex;
-  align-self: center;
+  margin: 1rem;
+  max-width: 1200px;
+  min-height: 80%;
+  padding: 20px;
 `;
 
-export default function ContentContainer({ children }) {
+export default function MainContainer({ children }) {
   return <ContentWrapper>{children}</ContentWrapper>;
 }

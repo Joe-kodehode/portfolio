@@ -1,22 +1,12 @@
-import projectsList from "./../../components/projectsList.json";
+import ProjectsCard from "../../components/ProjectsCard";
+import MainContainer from "../../components/MainContainer";
 
 export default function Projects() {
   return (
     <>
-      {projectsList.map((project) => (
-        <div key={project.id}>
-          {project.name}
-          {<br />}
-          <img
-            src={`https://github.com/Joe-kodehode/portfolio/blob/main/src/images/${project.img}?raw=true`}
-            alt=""
-          />
-          {<br />}
-          {project.description}
-
-          {/* {console.log(project)} */}
-        </div>
-      ))}
+      <MainContainer>
+        <ProjectsCard />
+      </MainContainer>
     </>
   );
 }
