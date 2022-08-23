@@ -5,22 +5,26 @@ const GlobalStyle = createGlobalStyle`
    margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  color: white;
+  font-family: "Inter", sans-serif;
 }
 
 #root {
     min-height: 100vh;
-    max-width: 100vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
     align-items: center;
     justify-content: center;
-
+    
 } 
 
 body {
    --bg-color: teal;
    background: linear-gradient(to bottom left, #000000, var(--bg-color));
     min-height: 100vh;
+    &::-webkit-scrollbar {
+    display: none;
+  }
 }`;
 
 export default GlobalStyle;

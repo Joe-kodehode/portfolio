@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import MainContainer from "../components/MainContainer";
-import HeroTitle from "../components/HeroTitle";
 
 const StyledAbout = styled.article`
-  color: white;
-  font-family: "inter", sans-serif;
   font-size: 22px;
   line-height: 1.5;
   letter-spacing: 1px;
-  padding: 15px;
 `;
 
 const Title = styled.h2`
