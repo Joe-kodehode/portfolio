@@ -11,6 +11,10 @@ export const StyledProjectsCard = styled.div`
   border-radius: 2rem;
   overflow: hidden;
   width: 600px;
+
+  @media only screen and (max-width: 900px) {
+    width: 90%;
+  }
 `;
 
 export const StyledProjectsTitle = styled.h3`

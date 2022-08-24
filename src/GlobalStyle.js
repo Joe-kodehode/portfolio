@@ -15,7 +15,10 @@ const GlobalStyle = createGlobalStyle`
     grid-template-columns: 8fr 2fr;
     align-items: center;
     justify-content: center;
-    
+    @media only screen and (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+  }
 } 
 
 body {

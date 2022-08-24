@@ -11,6 +11,10 @@ const ContentWrapper = styled.main`
   margin: 5rem;
   min-height: 80%;
   padding: 20px;
+
+  @media only screen and (max-width: 900px) {
+    width: 90vw;
+  }
 `;
 
 export default function MainContainer({ children }) {

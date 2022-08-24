@@ -5,11 +5,13 @@ const StyledAbout = styled.article`
   font-size: 22px;
   line-height: 1.5;
   letter-spacing: 1px;
+  padding: 0 1.2rem;
 `;
 
 const Title = styled.h2`
   color: cornflowerblue;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  margin-top: 20px;
 `;
 
 export default function About() {
