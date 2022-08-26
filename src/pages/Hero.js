@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 
 const HeroWrapper = styled.article`
@@ -11,14 +12,18 @@ const HeroWrapper = styled.article`
 `;
 
 const HeroText = styled.h1`
-  font-size: 80px;
+  font-size: var(--font-size-h1);
 `;
 
 const HeroSpan = styled.span`
   color: red;
 `;
 
-export default function HeroTitle() {
+export default function HeroTitle({ setTheme }) {
+  useEffect(() => {
+    setTheme({ bg: "green" });
+  }, []);
+
   return (
     <HeroWrapper>
       <HeroText>

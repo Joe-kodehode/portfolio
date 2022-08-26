@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HeroTitle from "../components/HeroTitle";
+import HeroTitle from "./HeroTitle";
 
 const styledHome = styled.div``;
 

@@ -10,11 +10,7 @@ export const StyledProjectsCard = styled.div`
   background: rgba(0, 0, 0, 0.3);
   border-radius: 2rem;
   overflow: hidden;
-  width: 600px;
-
-  @media only screen and (max-width: 900px) {
-    width: 90%;
-  }
+  width: var(--width-projects-card);
 `;
 
 export const StyledProjectsTitle = styled.h3`

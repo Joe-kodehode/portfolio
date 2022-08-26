@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+  border: 1px solid green;
   display: flex;
   flex-direction: column;
   font-size: 40px;
@@ -11,11 +12,13 @@ export const Nav = styled.nav`
     flex-direction: row;
     font-size: 16px;
     width: 100%;
+    justify-content: space-around;
   }
 `;
 
 export const NavItem = styled(NavLink)`
-  padding: 10px 0px;
+  border: 1px solid red;
+  padding: var(--padding-nav-item);
   text-decoration: none;
   color: white;
   ${({ linkcolor, active }) => active && `color: ${linkcolor};`}
@@ -23,33 +26,33 @@ export const NavItem = styled(NavLink)`
   ${({ linkcolor, active }) =>
     active && `text-shadow: 8px 0px 10px ${linkcolor};`}
   transition: transform 200ms, text-shadow 200ms;
+
   &:hover {
     cursor: pointer;
     ${({ linkcolor }) => `color: ${linkcolor};`}
     ${({ linkcolor }) => `text-shadow: 8px 0px 10px ${linkcolor};`}
-    
+  
     transform: translate(-10px);
+  }
 
-    @media only screen and (max-width: 900px) {
-      width: 60px;
+  @media only screen and (max-width: 900px) {
+    ${({ active }) => active && `transform: translate(0px, 4px);`}
+    white-space: nowrap;
 
-      &:hover {
-        transform: translate(0px, 3px);
+    font-size: 4vw;
+
+    &:hover {
+      transform: translate(0px, 4px);
     }
   }
 `;
 
 export const NavContainer = styled.aside`
-  height: 100vh;
   display: flex;
   align-items: center;
   align-self: flex-start;
-  position: sticky;
-  inset: 0;
-
-  @media only screen and (max-width: 900px) {
-    width: 100%;
-    height: 30px;
-    position: absolute;
-  }
+  position: var(--position-nav);
+  width: var(--width-nav);
+  height: var(--height-nav);
+  margin-top: var(--margin-top-nav);
 `;

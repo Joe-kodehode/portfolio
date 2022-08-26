@@ -8,13 +8,11 @@ const ContentWrapper = styled.main`
   background: rgba(255, 255, 255, 0.2);
   border-radius: 2rem;
   border: black 1px solid;
-  margin: 5rem;
+  margin: 1rem;
   min-height: 80%;
   padding: 20px;
-
-  @media only screen and (max-width: 900px) {
-    width: 90vw;
-  }
+  width: var(--main-width);
+  margin-top: var(--main-margin-top);
 `;
 
 export default function MainContainer({ children }) {
