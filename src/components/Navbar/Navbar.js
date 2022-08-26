@@ -8,7 +8,7 @@ export default function Navbar() {
     <NavContainer>
       <Nav className="Nav">
         <NavItem
-          linkcolor={"green"}
+          linkcolor={"#004756"}
           active={pathname === "/" ? "active" : ""}
           to="/"
         >
@@ -22,7 +22,7 @@ export default function Navbar() {
           ABOUT ME
         </NavItem>
         <NavItem
-          linkcolor={"red"}
+          linkcolor={"#FF0000"}
           active={pathname === "/Skills" ? "active" : ""}
           to="/Skills"
         >

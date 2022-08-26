@@ -23,4 +23,13 @@ export const projectsList = [
     github: "https://github.com/Joe-kodehode/portfolio",
     live: "https://joe-kodehode.github.io/portfolio/",
   },
+  {
+    name: "Portfolio",
+    img: fakeStoreImg,
+    description:
+      "This fake online store was made using React. It utilizes techniques such as: Router, API, .map, styled components and props.",
+    languages: [htmlIcon, cssIcon, jsIcon, reactIcon],
+    github: "https://github.com/Joe-kodehode/portfolio",
+    live: "https://joe-kodehode.github.io/portfolio/",
+  },
 ];

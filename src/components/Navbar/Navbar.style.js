@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   font-size: 40px;
@@ -17,7 +16,6 @@ export const Nav = styled.nav`
 `;
 
 export const NavItem = styled(NavLink)`
-  border: 1px solid red;
   padding: var(--padding-nav-item);
   text-decoration: none;
   color: white;

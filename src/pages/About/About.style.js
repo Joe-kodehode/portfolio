@@ -14,7 +14,7 @@ export const StyledAbout = styled.article`
 `;
 
 export const StyledTitle = styled.h2`
-  color: cornflowerblue;
+  color: green;
   margin-bottom: 8px;
   margin-top: 20px;
 `;

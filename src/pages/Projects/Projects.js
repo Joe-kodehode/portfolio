@@ -1,10 +1,10 @@
 import ProjectsCard from "../../components/ProjectsCard";
-import MainContainer from "../../components/MainContainer";
+import MainContainer from "../../components/MainContainer/MainContainer";
 import { useEffect } from "react";
 
 export default function Projects({ setTheme }) {
   useEffect(() => {
-    setTheme({ bg: "blue" });
+    setTheme({ bg: "#2339FF" });
   }, []);
 
   return (

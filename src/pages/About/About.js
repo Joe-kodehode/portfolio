@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { StyledTitle, StyledAbout } from "./About.style";
-import MainContainer from "./../../components/MainContainer";
+import MainContainer from "../../components/MainContainer/MainContainer";
 import Text from "./Text";
 
 export default function About({ setTheme }) {
@@ -14,9 +14,9 @@ export default function About({ setTheme }) {
         <StyledAbout>
           <StyledTitle>{Text.Current.Title}</StyledTitle>
           {Text.Current.Body}
-          <StyledTitle>{Text.Title2}</StyledTitle>
+          <StyledTitle>{Text.History.Title}</StyledTitle>
           {Text.History.Body}
-          <StyledTitle>{Text.Title3}</StyledTitle>
+          <StyledTitle>{Text.Future.Title}</StyledTitle>
           {Text.Future.Body}
         </StyledAbout>
       </MainContainer>

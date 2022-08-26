@@ -3,7 +3,7 @@ import { HomeSpan, HomeWrapper, HomeText } from "./Home.style";
 
 export default function HomeTitle({ setTheme }) {
   useEffect(() => {
-    setTheme({ bg: "green" });
+    setTheme({ bg: "#004756" });
   }, []);
 
   return (

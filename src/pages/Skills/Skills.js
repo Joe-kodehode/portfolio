@@ -1,10 +1,10 @@
-import MainContainer from "../../components/MainContainer";
+import MainContainer from "../../components/MainContainer/MainContainer";
 import { useEffect } from "react";
 import { StyledSkillsContainer, StyledParagraph } from "./Skills.style";
 
 export default function Skills({ setTheme }) {
   useEffect(() => {
-    setTheme({ bg: "red" });
+    setTheme({ bg: "#FF0000" });
   }, []);
 
   return (
