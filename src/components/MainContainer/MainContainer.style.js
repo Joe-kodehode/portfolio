@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ContentWrapper = styled.main`
+export const ContentWrapper = styled.main`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -14,7 +14,3 @@ const ContentWrapper = styled.main`
   width: var(--main-width);
   margin-top: var(--main-margin-top);
 `;
-
-export default function MainContainer({ children }) {
-  return <ContentWrapper>{children}</ContentWrapper>;
-}

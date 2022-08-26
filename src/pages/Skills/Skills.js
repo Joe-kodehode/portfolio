@@ -1,12 +1,6 @@
-import MainContainer from "../components/MainContainer";
-import styled from "styled-components";
+import MainContainer from "../../components/MainContainer";
 import { useEffect } from "react";
-
-const StyledParagraph = styled.p``;
-
-const StyledSkillsContainer = styled.div`
-  /* width: 500px; */
-`;
+import { StyledSkillsContainer, StyledParagraph } from "./Skills.style";
 
 export default function Skills({ setTheme }) {
   useEffect(() => {
