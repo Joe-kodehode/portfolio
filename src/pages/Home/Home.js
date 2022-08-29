@@ -1,20 +1,37 @@
-import { useEffect } from "react";
-import { HomeSpan, HomeWrapper, HomeText } from "./Home.style";
+import { useEffect, useState } from "react";
+import {
+  HomeSpan,
+  HomeWrapper,
+  HomeText,
+  CheckBoxWrapper,
+  CheckBoxLabel,
+  CheckBox,
+} from "./Home.style";
 
 export default function HomeTitle({ setTheme }) {
   useEffect(() => {
     setTheme({ bg: "#004756" });
   }, []);
 
+  const [title, setTitle] = useState(true);
+
   return (
     <HomeWrapper>
       <HomeText>
-        <HomeSpan>JOE</HomeSpan>
+        <HomeSpan>JOE,</HomeSpan>
         <br />
-        FRONT END
+        {title ? "FRONT END" : "FRANTIC"}
         <br />
-        <HomeSpan>WEB</HomeSpan> DEVELOPER
+        <HomeSpan>WEB</HomeSpan> {title ? "DEVELOPER" : "GOOGLER"}
       </HomeText>
+      <CheckBoxWrapper>
+        <CheckBox
+          id="checkbox"
+          type="checkbox"
+          onClick={() => setTitle((prev) => !prev)}
+        />
+        <CheckBoxLabel htmlFor="checkbox" />
+      </CheckBoxWrapper>
     </HomeWrapper>
   );
 }
