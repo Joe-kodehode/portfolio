@@ -29,7 +29,7 @@ export default function Navbar() {
           SKILLS
         </NavItem>
         <NavItem
-          linkcolor={"blue"}
+          linkcolor={"#2339FF"}
           active={pathname === "/Projects" ? "active" : ""}
           to="/Projects"
         >

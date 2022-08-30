@@ -23,6 +23,9 @@ export const HomeSpan = styled.span`
 export const CheckBoxWrapper = styled.div`
   position: fixed;
   bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.1;
 `;
 export const CheckBoxLabel = styled.label`
   position: absolute;
@@ -63,4 +66,12 @@ export const CheckBox = styled.input`
       transition: 0.2s;
     }
   }
+`;
+
+export const HexagonContainer1 = styled.div`
+  position: absolute;
+  top: 0;
+  justify-self: center;
+  width: 700px;
+  height: 500px;
 `;

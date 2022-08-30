@@ -6,7 +6,10 @@ import {
   CheckBoxWrapper,
   CheckBoxLabel,
   CheckBox,
+  HexagonContainer1,
 } from "./Home.style";
+
+import Hexagon from "../../components/Hexagon";
 
 export default function HomeTitle({ setTheme }) {
   useEffect(() => {
@@ -32,6 +35,9 @@ export default function HomeTitle({ setTheme }) {
         />
         <CheckBoxLabel htmlFor="checkbox" />
       </CheckBoxWrapper>
+      <HexagonContainer1>
+        <Hexagon />
+      </HexagonContainer1>
     </HomeWrapper>
   );
 }
