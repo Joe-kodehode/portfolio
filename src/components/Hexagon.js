@@ -9,21 +9,17 @@ import reactIcon from "../images/reactIcon.png";
 // every 10 seconds, choose a random hexagon, splice a pic from randomPicArr, set it to the img src, play its 10s animation then return it
 
 export default function Hexagon() {
-  let randomPicArr = [htmlIcon, cssIcon, jsIcon, reactIcon];
+  let picArr1 = [htmlIcon, cssIcon, jsIcon, reactIcon];
+  let picArr2 = [cssIcon, jsIcon, reactIcon, htmlIcon];
 
-  let randomNum = Math.floor(Math.random() * 4);
-
-  const [Pic1, setPic1] = useState([]);
-  const [Pic2, setPic2] = useState([]);
+  const [pic1, setPic1] = useState(0);
+  const [pic2, setPic2] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const randomPic = randomPicArr.splice(randomNum, 1);
-      setPic1(randomPic);
-      setPic2(randomPic);
-      console.log(randomPicArr);
-      randomPicArr.push(randomPic);
-    }, 5000);
+      setPic1((prev) => (prev + 1) % picArr1.length);
+      setTimeout(() => setPic2((prev) => (prev + 1) % picArr2.length), 1500);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -31,17 +27,23 @@ export default function Hexagon() {
     <>
       <HexagonBorder1 />
       <Hexagon1>
-        <img src={Pic1} alt="programming language icons fading in and out" />
+        <img
+          src={picArr1[pic1]}
+          alt="programming language icons fading in and out"
+        />
       </Hexagon1>
       <HexagonBorder2 />
       <Hexagon2>
-        <img src={Pic2} alt="programming language icons fading in and out" />
+        <img
+          src={picArr2[pic2]}
+          alt="programming language icons fading in and out"
+        />
       </Hexagon2>
     </>
   );
 }
 
-const fade = keyframes`  
+const fade1 = keyframes`  
      0% {
       opacity:0;
     }
@@ -53,8 +55,20 @@ const fade = keyframes`
         opacity:0;
     }`;
 
+const fade2 = keyframes`  
+0% {
+ opacity:1;
+}
+
+50% {
+    opacity:0;
+}
+ 100% {
+   opacity:1;
+}`;
+
 const Hexagon1 = styled.div`
-  animation: ${fade} ease 14s;
+  animation: ${fade1} ease 3s infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +96,7 @@ const HexagonBorder1 = styled.div`
 `;
 
 const Hexagon2 = styled.div`
-  animation: ${fade} ease 14s;
+  animation: 3s ${fade2} ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
